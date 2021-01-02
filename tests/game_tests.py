@@ -21,4 +21,4 @@ class TestGame(unittest.TestCase):
     def test_draw(self):
         self.player_2.choice = 'rock'
         winner = self.game.check_winner(self.player_1, self.player_2)
-        self.assertEqual(None, winner)
+        self.assertEqual('draw', winner)

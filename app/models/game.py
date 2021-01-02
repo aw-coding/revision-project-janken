@@ -16,4 +16,7 @@ class Game():
         elif self.win_lookup.get(player2.choice) == player1.choice:
             winner = player2
 
+        elif player1.choice == player2.choice:
+            winner = 'draw'
+
         return winner
