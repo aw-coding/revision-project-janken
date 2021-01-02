@@ -22,3 +22,8 @@ class TestGame(unittest.TestCase):
         self.player_2.choice = 'rock'
         winner = self.game.check_winner(self.player_1, self.player_2)
         self.assertEqual('draw', winner)
+
+    def test_incorrect_input(self):
+        self.player_1.choice = 'pistol'
+        winner = self.game.check_winner(self.player_1, self.player_2)
+        self.assertEqual(None, winner)
