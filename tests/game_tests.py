@@ -17,3 +17,8 @@ class TestGame(unittest.TestCase):
     def test_player2_can_win(self):
         winner = self.game.check_winner(self.player_2, self.player_1)
         self.assertEqual(self.player_2, winner)
+
+    def test_draw(self):
+        self.player_2.choice = 'rock'
+        winner = self.game.check_winner(self.player_1, self.player_2)
+        self.assertEqual(None, winner)
