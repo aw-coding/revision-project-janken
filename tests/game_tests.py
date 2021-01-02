@@ -10,6 +10,10 @@ class TestGame(unittest.TestCase):
         self.player_3 = Player('Siobhan', 'scissors')
 
 
-    def test_player_1_win(self):
+    def test_player1_win(self):
         winner = self.game.check_winner(self.player_1, self.player_3)
         self.assertEqual(self.player_1, winner)
+
+    def test_player2_can_win(self):
+        winner = self.game.check_winner(self.player_2, self.player_1)
+        self.assertEqual(self.player_2, winner)
