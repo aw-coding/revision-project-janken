@@ -1,2 +1,2 @@
-FLASK_APP=janken.py
+FLASK_APP=app.py
 FLASK_ENV=development
